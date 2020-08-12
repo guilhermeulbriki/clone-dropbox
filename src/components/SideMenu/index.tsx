@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 declare global {
   interface Window {
@@ -18,29 +18,22 @@ const SideMenu: React.FC = ({ children }) => {
       setIsActive(false);
     }
 
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const classes = [
-    isActive ?  'open': '',
-    scrollY <= 300 ? 'scrollOpen' : '',
-  ];
+  const classes = [isActive ? "open" : "", scrollY <= 300 ? "scrollOpen" : ""];
 
-  const className = classes.join(' ').trim();
+  const className = classes.join(" ").trim();
 
   function toggleActiveMenu() {
-    setIsActive(prev => !prev);
+    setIsActive((prev) => !prev);
   }
 
   window.toggleActiveMenu = toggleActiveMenu;
 
-  return (
-    <Container className={className}>
-      {children}
-    </Container>
-  );
-}
+  return <Container className={className}>{children}</Container>;
+};
 
 export default SideMenu;

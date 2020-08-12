@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import { Container, HeaderWrapper, Header, DropboxLogo, Content } from './styles';
+import {
+  Container,
+  HeaderWrapper,
+  Header,
+  DropboxLogo,
+  Content,
+} from "./styles";
 
 interface Props {
-  variant: 'blue' | 'beige' | 'white' | 'black';
+  variant: "blue" | "beige" | "white" | "black";
   title: string;
   description: string;
 }
@@ -24,7 +30,9 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
             <span>Dropbox</span>
           </h1>
 
-          <button onClick={handleToggle}>{buttonVariant === 0 ? 'Acessar' : 'Interagir'}</button>
+          <button onClick={handleToggle}>
+            {buttonVariant === 0 ? "Acessar" : "Interagir"}
+          </button>
         </Header>
       </HeaderWrapper>
 
@@ -34,6 +42,6 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
       </Content>
     </Container>
   );
-}
+};
 
 export default Section;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Container, Navigation, DropboxLogo, Form } from './styles';
+import { Container, Navigation, DropboxLogo, Form } from "./styles";
 
 const MenuForm: React.FC = () => {
   function handleToggle() {
@@ -15,7 +15,9 @@ const MenuForm: React.FC = () => {
           <span>Dropbox</span>
         </h1>
 
-        <button className="active--close" onClick={handleToggle}>✕</button>
+        <button className="active--close" onClick={handleToggle}>
+          ✕
+        </button>
       </Navigation>
 
       <Form>
@@ -30,11 +32,12 @@ const MenuForm: React.FC = () => {
         <button>Prosseguir</button>
 
         <span className="terms">
-          Esta página está sujeita à política de privacidade e aos Termos de serviço.
+          Esta página está sujeita à política de privacidade e aos Termos de
+          serviço.
         </span>
       </Form>
     </Container>
   );
-}
+};
 
 export default MenuForm;
